@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpmdq1fubqkf"]
+
+[ext_resource type="PackedScene" path="res://IK HAT GODOT.tscn" id="2_jwnsc"]
+[ext_resource type="Texture2D" uid="uid://c1h68a6ixx8cr" path="res://Giant_fire_beetle-5e.webp" id="2_r8tog"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6yecj"]
+size = Vector2(1139, 265)
+
+[sub_resource type="TileSet" id="TileSet_f6jef"]
+physics_layer_0/collision_layer = 1
+
+[node name="Game_Floor" type="Node2D"]
+position = Vector2(-1, 1)
+
+[node name="player" parent="." instance=ExtResource("2_jwnsc")]
+position = Vector2(511, -554)
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+position = Vector2(571, 643)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-7, -4)
+shape = SubResource("RectangleShape2D_6yecj")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(-40, 0)
+scale = Vector2(4.352, 1)
+texture = ExtResource("2_r8tog")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(0, 4)
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_f6jef")
+collision_animatable = true
+format = 2
+layer_0/tile_data = PackedInt32Array(393219, 3, 0, 393220, 3, 0, 393221, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 393229, 3, 0, 393230, 3, 0, 393231, 3, 0, 393232, 3, 0, 393233, 3, 0, 393234, 3, 0, 458771, 3, 0, 458772, 3, 0, 458773, 3, 0, 458774, 3, 0, 458775, 3, 0, 458776, 3, 0, 393243, 3, 0, 393244, 3, 0, 393245, 3, 0, 393246, 3, 0, 458782, 3, 0, 458783, 3, 0, 458784, 3, 0, 458785, 3, 0, 458786, 3, 0, 196646, 3, 0, 262183, 3, 0, 196648, 3, 0, 131111, 3, 0, 196651, 3, 0, 131116, 3, 0, 196653, 3, 0, 262188, 3, 0, 393253, 3, 0, 458789, 3, 0, 458790, 3, 0, 524326, 3, 0, 524327, 3, 0, 589863, 3, 0, 589864, 3, 0, 589865, 3, 0, 589866, 3, 0, 589867, 3, 0, 589868, 3, 0, 589869, 3, 0, 524334, 3, 0, 524335, 3, 0, 458799, 3, 0, 393263, 3, 0, 524340, 65539, 1, 524341, 65539, 1, 524342, 65539, 1, 524343, 65539, 1, 524351, 65539, 1, 524352, 65539, 1, 524353, 65539, 1, 458817, 65539, 1, 458818, 65539, 1, 458819, 65539, 1, 393283, 65539, 1, 393284, 65539, 1, 327748, 65539, 1, 262213, 65539, 1, 196677, 65539, 1, 196678, 65539, 1, 131142, 65539, 1, 65607, 65539, 1, 393299, 65539, 1, 393300, 65539, 1, 458836, 65539, 1, 458837, 65539, 1, 393302, 65539, 1, 327780, 65539, 1, 327781, 65539, 1, 327782, 65539, 1, 327784, 65539, 1, 327783, 65539, 1, 327796, 65539, 1, 327797, 65539, 1, 327798, 65539, 1, 327799, 65539, 1, 327800, 65539, 1, 327801, 65539, 1)

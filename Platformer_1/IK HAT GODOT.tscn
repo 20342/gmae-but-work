@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1ikycspfh77l"]
+
+[ext_resource type="Script" path="res://player_code.gd" id="1_h8nu3"]
+[ext_resource type="Texture2D" uid="uid://b247dr0dfv582" path="res://icon.svg" id="2_iq6nc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_stne8"]
+size = Vector2(117.117, 85.5856)
+
+[node name="Player_1" type="CharacterBody2D"]
+script = ExtResource("1_h8nu3")
+jump_height = -1200
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-31, -37.5)
+scale = Vector2(0.222, 0.222)
+shape = SubResource("RectangleShape2D_stne8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-30, -37)
+scale = Vector2(0.223, 0.178)
+texture = ExtResource("2_iq6nc")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_smoothed = true
+position_smoothing_enabled = true
